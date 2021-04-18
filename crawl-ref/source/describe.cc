@@ -332,6 +332,7 @@ static vector<string> _randart_propnames(const item_def& item,
         { ARTP_NEGATIVE_ENERGY,       prop_note::symbolic },
         { ARTP_WILLPOWER,             prop_note::symbolic },
         { ARTP_REGENERATION,          prop_note::symbolic },
+        { ARTP_MPREGEN,               prop_note::symbolic },
         { ARTP_RMUT,                  prop_note::plain },
         { ARTP_RCORR,                 prop_note::plain },
 
@@ -584,6 +585,8 @@ static string _randart_descrip(const item_def &item)
         { ARTP_SHIELDING, "It affects your SH (%d).", false},
         { ARTP_HARM, "It increases damage dealt and taken.", false},
         { ARTP_RAMPAGING, "It bestows one free step when moving towards enemies.",
+          false},
+        { ARTP_MPREGEN, "It increases your rate of mana regeneration.",
           false},
     };
 

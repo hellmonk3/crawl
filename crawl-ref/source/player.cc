@@ -1181,6 +1181,23 @@ int player_regen()
     return rr;
 }
 
+static int _player_bonus_mpregen()
+{
+    int rr = 0;
+
+    // Amulets and artefacts.
+    for (int slot = EQ_MIN_ARMOUR; slot <= EQ_MAX_WORN; ++slot)
+    {
+        if (you.melded[slot] || you.equip[slot] == -1 || !you.activated[slot])
+            continue;
+        const item_def &arm = you.inv[you.equip[slot]];
+        if (arm.is_type(OBJ_JEWELLERY, AMU_MANA_REGENERATION))
+            rr += MPREGEN_PIP;
+        if (is_artefact(arm))
+            rr += MPREGEN_PIP * artefact_property(arm, ARTP_MPREGEN);
+    }
+}
+
 int player_mp_regen()
 {
     if (you.has_mutation(MUT_HP_CASTING))
@@ -1191,8 +1208,7 @@ int player_mp_regen()
     if (you.get_mutation_level(MUT_MANA_REGENERATION))
         regen_amount *= 2;
 
-    if (you.props[MANA_REGEN_AMULET_ACTIVE].get_int() == 1)
-        regen_amount += 25;
+    regen_amount += MPREGEN_PIP * _player_bonus_mpregen();
 
     return regen_amount;
 }

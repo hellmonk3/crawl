@@ -64,6 +64,8 @@
 static const int MAX_STAT_VALUE = 125;
 /// The standard unit of regen; one level in artifact inscriptions
 static const int REGEN_PIP = 100;
+/// The standard unit of mana regen; one level in artifact inscriptions
+static const int MPREGEN_PIP = 25;
 /// The standard unit of WL; one level in %/@ screens
 static const int WL_PIP = 40;
 /// The standard unit of stealth; one level in %/@ screens

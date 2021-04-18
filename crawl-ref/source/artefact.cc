@@ -357,6 +357,7 @@ struct jewellery_fake_artp
 
 static map<jewellery_type, vector<jewellery_fake_artp>> jewellery_artps = {
     { AMU_REGENERATION, { { ARTP_REGENERATION, 1 } } },
+    { AMU_MANA_REGENERATION, { { ARTP_MPREGEN, 1 } } },
     { AMU_REFLECTION, { { ARTP_SHIELDING, AMU_REFLECT_SH / 2} } },
 
     { RING_MAGICAL_POWER, { { ARTP_MAGICAL_POWER, 9 } } },
@@ -576,6 +577,7 @@ static bool _artp_can_go_on_item(artefact_prop_type prop, const item_def &item,
             return item_class == OBJ_WEAPONS && !is_range_weapon(item);
         // only on items that can't be quickly swapped
         case ARTP_REGENERATION:
+        case ARTP_MPREGEN:
         case ARTP_PREVENT_SPELLCASTING:
         case ARTP_HARM:
         case ARTP_INVISIBLE:
@@ -726,6 +728,8 @@ static const artefact_prop_data artp_data[] =
         []() {return 1;}, nullptr, 0, 0},
     { "Rampage", ARTP_VAL_BOOL, 25, // ARTP_RAMPAGING,
         []() {return 1;}, nullptr, 0, 0},
+    { "MPRegen", ARTP_VAL_BOOL, 15,   // ARTP_MPREGEN,
+        []() { return 1; }, nullptr, 0, 0 },
 };
 COMPILE_CHECK(ARRAYSZ(artp_data) == ARTP_NUM_PROPERTIES);
 // weights sum to 1000
@@ -1487,6 +1491,10 @@ static bool _randart_is_redundant(const item_def &item,
 
     case AMU_REGENERATION:
         provides = ARTP_REGENERATION;
+        break;
+        
+    case AMU_MANA_REGENERATION:
+        provides = ARTP_MPREGEN;
         break;
 
     case AMU_REFLECTION:
