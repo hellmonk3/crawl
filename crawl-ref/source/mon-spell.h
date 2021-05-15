@@ -89,6 +89,12 @@ static const mon_spellbook mspell_list[] =
     },
 
     // ('b') Bats, birds, and butterflies.
+    {  MST_CHAOS_BUTTERFLY,
+      {
+        { SPELL_CALL_OF_CHAOS, 20, MON_SPELL_NATURAL},
+      }
+    },
+    
     {  MST_SHARD_SHRIKE,
       {
         { SPELL_THROW_ICICLE, 24, MON_SPELL_NATURAL | MON_SPELL_BREATH },

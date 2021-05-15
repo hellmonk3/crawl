@@ -769,6 +769,11 @@ centaur warrior
 A muscular centaur, veteran of numerous battles, armed with well-made weapons
 and able to use them skillfully.
 %%%%
+chaos butterfly
+
+A particularly large, garishly coloured butterfly that calls on the powers
+of chaos wherever it goes.
+%%%%
 chaos spawn
 
 A being of pure chaos, its form is constantly shifting, growing and then losing

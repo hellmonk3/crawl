@@ -63,6 +63,7 @@ butterfly7
 butterfly8
 butterfly9
 butterfly10
+chaos_butterfly MONS_CHAOS_BUTTERFLY
 %rim 0
 fire_bat MONS_FIRE_BAT
 bennu MONS_BENNU

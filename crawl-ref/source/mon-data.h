@@ -186,7 +186,6 @@ static monsterentry mondata[] =
     AXED_MON(MONS_DEEP_DWARF_SCION, "deep dwarf scion")
     AXED_MON(MONS_DEEP_DWARF_ARTIFICER, "deep dwarf artificer")
     AXED_MON(MONS_DEEP_DWARF_NECROMANCER, "deep dwarf necromancer")
-    AXED_MON(MONS_CHAOS_BUTTERFLY, "chaos butterfly")
     AXED_MON(MONS_POLYMOTH, "polymoth")
     AXED_MON(MONS_MOTH_OF_SUPPRESSION, "moth of suppression")
     AXED_MON(MONS_ROCK_WORM, "rock worm")
@@ -377,6 +376,19 @@ static monsterentry mondata[] =
     I_BRAINLESS, HT_LAND, 25, DEFAULT_ENERGY,
     MONUSE_NOTHING, SIZE_TINY, MON_SHAPE_INSECT_WINGED,
     {TILEP_MONS_BUTTERFLY, TVARY_MOD}, TILE_ERROR
+},
+
+{
+    MONS_CHAOS_BUTTERFLY, 'b', ETC_RANDOM, "chaos butterfly",
+    M_BATTY | M_FLIES,
+    MR_VUL_POISON,
+    10, MONS_BUTTERFLY, MONS_CHAOS_BUTTERFLY, MH_NATURAL, 60,
+    { {AT_BITE, AF_CHAOTIC, 25}, AT_NO_ATK, AT_NO_ATK, AT_NO_ATK },
+    9, 580,
+    0, 25, MST_CHAOS_BUTTERFLY, false, S_SILENT,
+    I_BRAINLESS, HT_LAND,  20, DEFAULT_ENERGY,
+    MONUSE_NOTHING, SIZE_TINY, MON_SHAPE_INSECT_WINGED,
+    {TILEP_MONS_CHAOS_BUTTERFLY}, TILE_ERROR
 },
 
 { // one vault + player transform (Vp ability)
