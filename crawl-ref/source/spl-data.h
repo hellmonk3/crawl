@@ -1426,6 +1426,18 @@ static const struct spell_desc spelldata[] =
 },
 
 {
+    SPELL_SPIT_VENOM, "Spit Venom",
+    spschool::poison,
+    spflag::dir_or_target | spflag::monster | spflag::noisy
+        | spflag::needs_tracer,
+    2,
+    0,
+    3, 3,
+    3, 0,
+    TILEG_SPIT_POISON,
+},
+
+{
     SPELL_SUMMON_UNDEAD, "Summon Undead",
     spschool::summoning | spschool::necromancy,
     spflag::monster | spflag::mons_abjure,

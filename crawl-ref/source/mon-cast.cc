@@ -1400,6 +1400,7 @@ bolt mons_spell_beam(const monster* mons, spell_type spell_cast, int power,
     case SPELL_THORN_VOLLEY:
     case SPELL_HURL_DAMNATION:
     case SPELL_SPIT_POISON:
+    case SPELL_SPIT_VENOM:
     case SPELL_MIASMA_BREATH:      // death drake
     case SPELL_GHOSTLY_FIREBALL:
     case SPELL_FLASH_FREEZE:

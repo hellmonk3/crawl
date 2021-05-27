@@ -1303,6 +1303,11 @@ Spit Poison spell
 
 <Spit Poison ability>
 %%%%
+Spit Venom spell
+
+Spits a potent venom that may slow or paralyse the target in addition to
+poisoning it.
+%%%%
 Splinterspray spell
 
 Fires a directed stream of sharp wooden splinters. Its damage is strongly

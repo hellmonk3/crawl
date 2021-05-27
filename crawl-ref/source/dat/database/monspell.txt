@@ -224,6 +224,10 @@ Throw Klown Pie cast
 
 @The_monster@ pies you viciously!
 %%%%
+Spit Venom cast
+
+@The_monster@ spits venom at @target@.
+%%%%
 #################################################
 # These have special hard-coded messaging.
 #################################################

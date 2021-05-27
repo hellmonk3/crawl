@@ -949,6 +949,23 @@ _mon_hex_zap(ZAP_BANISHMENT, BEAM_BANISH, 150),
 },
 
 {
+    ZAP_SPIT_VENOM,
+    "splash of venom",
+    50,
+    new dicedef_calculator<1, 4, 1, 2>,
+    new tohit_calculator<5, 1, 6>,
+    new dicedef_calculator<1, 4, 1, 10>,
+    new tohit_calculator<16, 1, 20>,
+    GREEN,
+    false,
+    BEAM_POISON,
+    DCHAR_FIRED_ZAP,
+    false,
+    false,
+    1
+},
+
+{
     ZAP_DEBUGGING_RAY,
     "debugging ray",
     10000,

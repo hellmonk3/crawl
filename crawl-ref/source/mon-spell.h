@@ -570,6 +570,13 @@ static const mon_spellbook mspell_list[] =
        { SPELL_BLINK_AWAY, 29, MON_SPELL_NATURAL },
       }
     },
+    
+    {  MST_SPITTING_SPIDER,
+      {
+       { SPELL_SPIT_VENOM, 15, MON_SPELL_NATURAL },
+       { SPELL_ENSNARE, 15, MON_SPELL_NATURAL },
+      }
+    },
 
     {  MST_ORB_SPIDER,
       {
